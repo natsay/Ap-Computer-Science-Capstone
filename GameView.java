@@ -1,27 +1,9 @@
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.Timer;
-
-public class GameView extends JComponent
+public class GameView
 {
-    private AbstractGameState state;
-    public GameView()
+    public static void main(String[] args) 
     {
-        this.setFocusable(true);
-        this.transferFocus();
+        GameFrame frame= new GameFrame();
+        //creates new GameFrame
     }
-    
-    public void setState(AbstractGameState state)
-    {
-        this.state = state;
-        this.repaint();
-    }
-
-    public void paintComponent(Graphics g)
-    {
-        state.drawOn(g);
-    }
-
 }
